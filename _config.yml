@@ -3,7 +3,7 @@ title: 猫侠的小窝
 SEOTitle: 猫侠的小窝
 header-img: img/post-bg-desk.jpg
 email: 69917309@qq.com
-description: "撒打算大."
+description: "一步一步，盖个大房子……."
 keyword: "candy1126xx, candy1126xx's Blog, 猫侠的博客, 猫侠的小窝, 焦孟骁, Android, 视频处理"
 url: "http://candy1126xx.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -11,7 +11,7 @@ github_repo: "https://github.com/candy1126xx/candy1126xx.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
+sidebar-about-description: "本职Andorid，学习视频处理ing……"
 sidebar-avatar: /img/my-avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
