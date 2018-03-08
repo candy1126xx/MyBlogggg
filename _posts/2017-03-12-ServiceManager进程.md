@@ -11,7 +11,9 @@ tags:                               #标签
 ---
 
 ## 简介
-ServiceManager进程是由init进程创建的。源码文件是service_native.c。它是Native层的、系统全局“服务端”的管理者。Java层系统全局“服务端”的管理者是运行在SystemServer进程的ServiceManager对象。
+ServiceManager进程是由init进程创建的。源码文件是service_native.c。它是Native层的、系统全局“服务端”的管理者。
+
+每个应用进程和SystemServer进程都有1个ServiceManager对象。它以单例模式封装了ServiceManagerNative对象，提供对系统服务的“服务端”的缓存，并封装了向ServiceManager进程申请“服务端”的过程。
 
 ## 启动后做了些什么？
 1. 创建一个binder_state结构体；
@@ -55,3 +57,15 @@ ServiceManager进程是由init进程创建的。源码文件是service_native.c�
 3. 搜索svclist，看服务是否已经存在；如果不存在，创建svcinfo，并添加到svclist。
 
 至此，service\_manager.c -> svclist多了一个svcinfo，其中，handle为？？？，name为“android.os.service_manager”。
+
+## 应用进程获取系统服务的服务端
+在[Java]ServiceManager.getService()中：
+
+1. 查询缓存sCache中是否有服务名对应的"客户端"，如果有直接返回；
+2. 否则，获取ServiceManagerNative.ServiceManagerProxy的单例，调用它的getService()；
+3. 在ServiceManagerProxy.getService()中，调用BpBinder.transact()，转入Native层；
+4. 向ServiceManager的缓冲区中写数据，其中请求码为GET_SERVICE_TRANSACTION，InterfaceToken为“android.os.IServiceManager“，参数为要请求的服务名；
+5. ServiceManager进程从Binder驱动读出一个binder_write_read，转调service_manager.c -> do_find_service()；
+6. 搜索svclist，按name找到对应的scvinfo，并用scvinfo -> handle转换出一个指向BpBinder的指针，写入reply(Parcel)。
+7. 回到应用进程Java层，调用Parcel.nativeReadStrongBinder()从reply中读出IBinder对象，即为所需客户端；
+8. 把服务名、客户端存入缓存。
