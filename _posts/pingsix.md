@@ -5,7 +5,7 @@ subtitle:   《萍踪六记》下载           #副标题
 date:       2020-07-01              # 时间
 author:     candy1126xx                      # 作者
 header-img: img/home-bg-o.jpg    #这篇文章标题背景图片
-catalog: false                       # 是否归档
+catalog: true                       # 是否归档
 tags:                               #标签
     - 独立游戏
 ---
