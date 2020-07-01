@@ -58,7 +58,7 @@ kramdown:
 # 评论系统
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: 4dd3bdab8c76590463c0   #生成的clientID
   clientSecret: 25646b646100063b142418b4796a036063dcae7c  #同上
   repo: candy1126xx.github.io    #仓库名称
