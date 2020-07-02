@@ -47,8 +47,14 @@ tags:                               #标签
 游戏没有使用任何音频资源。我挑选了一些免费的音频素材，但是用起来都很违和，所以最终决定全场静音。
 
 #### 关于赞助
-如果你喜欢我的游戏，可以扫码赞助我8块钱。你的支持是我继续创作的动力，并且可以帮助我购买更多的原创美术资源。
-![](/img/5.jpg)![](/img/6.jpg)  
+如果你喜欢我的游戏，可以扫码赞助我8块钱。你的支持是我继续创作的动力，并且可以帮助我购买更多的原创美术资源。  
+
+<center>
+<figure>
+<img src="/img/5.jpg" width="200px" height="200px"/>
+<img src="/img/6.jpg" width="200px" height="200px"/>
+</figure>
+</center>
 
 #### 下载地址
 百度网盘：https://pan.baidu.com/s/1xiwwc8zRf-xOXdbZtRr6NA  
