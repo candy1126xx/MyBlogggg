@@ -50,7 +50,7 @@ tags:                               #标签
 如果你喜欢我的游戏，可以扫码赞助我8块钱。你的支持是我继续创作的动力，并且可以帮助我购买更多的原创美术资源。  
 
 <center>
-<figure>
+<figure class="half">
 <img src="/img/5.jpg" width="200px" height="200px"/>
 <img src="/img/6.jpg" width="200px" height="200px"/>
 </figure>
