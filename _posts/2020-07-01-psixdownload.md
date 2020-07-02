@@ -51,6 +51,5 @@ tags:                               #标签
 ![](/img/5.jpg)![](/img/6.jpg)  
 
 #### 下载地址
-[点击我开始下载](https://candy1126.coding.net/api/project/7874450/files/21307815/download)  
-备用度盘：https://pan.baidu.com/s/1xiwwc8zRf-xOXdbZtRr6NA  
+百度网盘：https://pan.baidu.com/s/1xiwwc8zRf-xOXdbZtRr6NA  
 提取码：x653
